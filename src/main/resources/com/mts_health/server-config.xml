@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <import resource="mongo-config.xml"/>
+
+    <beans profile="dev">
+        <import resource="application_context.xml"/>
+    </beans>
+
+    <beans profile="dev">
+        <bean id="returnStackTrace" class="java.lang.Boolean">
+            <constructor-arg type="boolean" value="true"/>
+        </bean>
+    </beans>
+
+    <!-- used for local development -->
+    <beans profile="dev">
+        <context:property-placeholder
+                location="classpath:/com/mts_health/profiles/server-dev.properties"/>
+    </beans>
+
+</beans>

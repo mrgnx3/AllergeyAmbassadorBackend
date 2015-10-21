@@ -1,0 +1,603 @@
+html {
+    font-size: 100%;
+}
+
+a, a:visited {
+    color: @base-font-color;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: @base-font-color;
+    font-size: 12px;
+    font-family: @base-font-family;
+}
+
+table {
+    font-size: 1em;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.cfix {
+    display: block;
+    clear: both;
+}
+
+img {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    padding: 0pt 4pt;
+    margin: 0px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #A3C3E3;
+}
+
+.small {
+    font-size: smaller;
+}
+
+/* panels */
+
+.hlight .iitems {
+    background-color: @panel-hlight-bgcolor;
+    border-color: @panel-hlight-bordercolor;
+    border-width: @panel-hlight-borderwidth;
+}
+
+.errors {
+    color: red;
+    font-size: smaller;
+}
+
+.errors .iitems {
+    border-color: @errors-fontcolor;
+    background-color: @errors-bgcolor;
+}
+
+.ipanel {
+    margin: 0;
+}
+
+.iitem {
+    color: @base-font-color;
+}
+
+.iitem .ilabel {
+    font-weight: bold;
+}
+
+.ibtn {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icgroup {
+    background-color: #ffffff;
+}
+
+/* misc */
+
+.center {
+    text-align: center;
+}
+
+.ispin > .ibtn {
+    min-width: 2em;
+    height: 1.6em;
+    background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#EFF7FF), to(#B6C7DE));
+}
+
+.ispin select {
+    height: 2em;
+    color: @base-font-color;
+}
+
+input.isearch {
+    margin-top: 6px;
+    padding: 8px 0px 8px 0px;
+}
+
+.isearch .iclose {
+    top: 10px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+/* header */
+.progress {
+    text-align: center;
+    color: #eeeeee;
+    font-weight: bold;
+    font-size: small;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    background: #014055;
+}
+
+/* footer */
+.ifooter {
+    color: @footer-font-color;
+    text-align: center;
+    background-color: @footer-bgcolor;
+    padding: 8px;
+    font-size: @footer-font-size;
+    border-top: 1px solid #000;
+    background-image: @footer-bgimage;
+}
+
+.ifooter a {
+    color: @footer-font-color;
+}
+
+/* home */
+
+div.maincnt {
+    border: 1px solid #DDDDDD;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+}
+
+.maincnt {
+    background-color: @base-bgcolor;
+    background-repeat: repeat-x;
+}
+
+.home {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.home .icontent {
+    padding: 0;
+}
+
+div.main {
+    text-align: center;
+    padding: 0px;
+}
+
+.menu a {
+    font-size: medium;
+    font-weight: normal;
+    text-decoration: none;
+    color: #fff;
+}
+
+.borderBottom {
+    border-bottom: 1px solid #233D92;
+}
+
+.borderTop {
+    border-top: 1px solid #233D92;
+}
+
+table.menu {
+    border-spacing: 0;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu2 {
+    margin-top: 70px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #666;
+}
+
+.menu2 div {
+    border-top: 1px solid #666;
+    background: #014055;
+}
+
+.menu2 a {
+    display: block;
+    padding: 3px 5px;
+    color: #ddd;
+    font-size: small;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.menu2 td {
+    padding: 6px;
+}
+
+table.menu td {
+    padding: 6px;
+}
+
+.wide {
+    width: 100%;
+}
+
+.icontent {
+    padding: 0em;
+}
+
+/* banners removing for screen shots etc*/
+.banner {
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 2px;
+}
+
+.banner a {
+    text-decoration: none;
+}
+
+.banner-info {
+    margin: 4px;
+    padding: 4px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.4);
+    color: #333;
+}
+
+.banner-warning {
+    margin: 4px;
+    padding: 4px;
+    border: 2px solid red;
+    background: rgba(247, 60, 46, 0.6);
+}
+
+.banner-warning a {
+    color: #eee;
+}
+
+/* select recent route */
+
+.routes {
+    font-size: small;
+}
+
+.diffroute {
+    text-align: right;
+}
+
+.routes p.small, .routes p.selected {
+    padding: 0pt 2pt;
+}
+
+.routes .selected {
+    font-weight: bold;
+}
+
+.routes .other {
+    text-align: right;
+    font-size: small;
+}
+
+/* fares */
+div.fare {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.fare .code {
+    float: left;
+}
+
+.fare a {
+    text-decoration: none;
+    background-color: #1A5EAB;
+    color: white;
+    font-weight: bold;
+    padding-top: 20px;
+    float: right;
+    height: 35px;
+}
+
+/* seatmap */
+
+table.seatpanel {
+    width: 100%;
+}
+
+table.seatpanel td {
+    padding: 0;
+}
+
+table.seatpanel a {
+    color: @base-font-color;
+    text-decoration: none;
+}
+
+table.seatmap {
+    border: 1px solid #ddd;
+    -moz-border-radius: 6px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+table.seatmap td {
+    padding: 2px;
+}
+
+td.no {
+    width: 10px;
+}
+
+.seat-remove {
+    font-size: small;
+}
+
+tr.selected td {
+    font-weight: bold;
+}
+
+tr.emergencySeat td, tr.emergencySeat td a {
+}
+
+table.seatmap td.rbl {
+    font-size: small;
+    color: #999;
+    text-align: right;
+    border-right: 1px solid #ddd;
+    padding-right: 6px;
+}
+
+.seat-scroll {
+    text-align: center;
+    font-size: small;
+}
+
+.seat-plane-type {
+    text-align: center;
+    font-size: small;
+}
+
+/* pricing */
+.price-tbl-wrap {
+    padding: 6px;
+    font-size: small;
+}
+
+table.price-tbl {
+    width: 100%;
+    border-spacing: 0;
+}
+
+table.price-tbl td.val {
+    text-align: right;
+}
+
+table.price-tbl tr.total {
+    font-weight: bold;
+}
+
+table.price-tbl tr.total td {
+    border-top: 1px solid #ccc;
+}
+
+table.price-tbl tr.paxfare td {
+    font-weight: bold;
+}
+
+table.price-tbl tr.tax td {
+    color: #666;
+    padding-bottom: 4px;
+}
+
+table.price-tbl tr.sum {
+    font-weight: bold;
+}
+
+/* calendar */
+.cal-panel {
+    padding: 0px;
+}
+
+.cal-panel .caption {
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 0px;
+    color: #1A6293;
+
+}
+
+table.cal-table {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border: none;
+}
+
+table.cal-table td {
+    border: 1px solid #aaa;
+    width: 14%;
+    text-align: center;
+    padding: 3px 0px;
+}
+
+table.cal-table tr.cal-header, table.cal-table tr.cal-header-nav {
+    background-color: #ddd;
+}
+
+table.cal-table tr.cal-header-nav td {
+    border-right: none;
+    border-left: none;
+}
+
+table.cal-table td.cal-dis {
+    color: #aaa;
+}
+
+table.cal-table td.cal-sel {
+    background-color: #d5f3f5;
+    font-weight: bold;
+}
+
+table.cal-table td.cal-dis, table.cal-table td.cal-om, table.cal-table td.cal-om a {
+    color: #aaa;
+}
+
+.cal-table a {
+    text-decoration: none;
+}
+
+/* */
+
+.configwarn {
+    background: #EF693B;
+    color: white;
+    font-size: small;
+    padding: 2px 4px;
+    font-weight: bold;
+}
+
+.configwarn a {
+    font-weight: normal;
+    padding-left: 10px;
+    color: yellow !important;
+}
+
+.msgvalue {
+    position: relative;
+}
+
+.msgcode {
+    position: absolute;
+    font-size: 10px;
+    border: 1px solid black;
+    background: yellow;
+    display: block;
+    padding: 2px;
+    top: -18px;
+    left: -6px;
+    opacity: 0.5;
+    color: black;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+.msgcode:hover {
+    opacity: 1;
+    z-index: 100;
+    font-size: 12px;
+}
+
+/* TRANSCODED CONTENT */
+
+.tc {
+    text-align: justify;
+}
+
+.tc .copy {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.tc .headernum {
+    display: none;
+}
+
+.tc .date {
+    font-size: small;
+    color: #999999;
+}
+
+.tc .header {
+    font-weight: bold;
+}
+
+.tc .link, .tc .thingstodo_links {
+    text-align: right;
+}
+
+.tc .title {
+    font-weight: bold;
+    background: none repeat scroll 0 0 #30508F;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 2px 4px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: large;
+}
+
+.tc .item_bar {
+    border-top: 1px dotted #AAAAAA;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 0.5em 0.25em;
+}
+
+.tc .copy {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.tc .tips_bar {
+    border-bottom: 1px dotted #AAAAAA;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.tc .date {
+
+}
+
+.tc h2, .tc h1 {
+    margin: 0px;
+    text-align: left;
+}
+
+.tc h2 {
+    font-size: large;
+    margin-bottom: 3px;
+}
+
+.tc h1 {
+    font-size: x-large;
+    margin-bottom: 5px;
+}
+
+.tc ol {
+    padding-left: 2em;
+    padding-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: small;
+}
+
+.tc li {
+    margin-top: 0.5em;
+}
+
+.tc #thingstodo_menu {
+    border-bottom: 1px dotted #AAAAAA;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+.tc #thingstodo_menu a {
+    display: block;
+}
+
+.tc.linklist {
+    line-height: 1.5em;
+}
+
+.tc .recommended_links_copy2, .tc #thingstodo_menu a {
+    padding: 0.25em;
+}

@@ -1,0 +1,69 @@
+import groovy.json.JsonSlurper
+
+group 'com.mts_health'
+version '1.0-SNAPSHOT'
+
+project.ext {
+  springCoreVersion = "4.0.9.RELEASE"
+  springDataVersion = "1.7.2.RELEASE"
+  slf4jVersion = "1.7.5"
+  releaseVersion = new JsonSlurper().parse(project.file('src/main/resources/package.json').newReader()).version
+}
+
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.7
+
+repositories {
+  mavenCentral()
+}
+
+configurations {
+  provided
+}
+
+
+dependencies {
+
+  //gradle commons
+  compile "au.com.ish.gradle:release:2.1"
+  compile "commons-io:commons-io:2.4"
+  compile "org.hidetake:gradle-ssh-plugin:0.1.7"
+
+  compile 'org.apache.commons:commons-lang3:3.2'
+
+  //jackson
+  compile "org.projectlombok:lombok:1.14.8"
+  compile 'com.fasterxml.jackson.core:jackson-core:2.5.0'
+  compile 'com.fasterxml.jackson.core:jackson-databind:2.5.0'
+  compile 'com.fasterxml.jackson.core:jackson-annotations:2.5.0'
+  compile 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.5.0'
+
+  //Spring
+  compile("org.springframework:spring-core:$project.springCoreVersion")
+  compile("org.springframework:spring-context:$project.springCoreVersion")
+  compile("org.springframework:spring-web:$project.springCoreVersion")
+  compile("org.springframework:spring-web:$project.springCoreVersion")
+  compile("org.springframework:spring-webmvc:$project.springCoreVersion")
+  compile("org.springframework.data:spring-data-mongodb:$project.springDataVersion") {
+    exclude group: "org.slf4j", module: "jcl-over-slf4j"
+    exclude group: "org.slf4j", module: "slf4j-api"
+  }
+
+  //logging
+  compile("org.slf4j:slf4j-api:$project.slf4jVersion")
+  compile("org.slf4j:jul-to-slf4j:$project.slf4jVersion")
+  compile("org.slf4j:jcl-over-slf4j:$project.slf4jVersion")
+  compile("org.slf4j:log4j-over-slf4j:$project.slf4jVersion")
+  compile 'org.codehaus.janino:janino:2.6.1'
+  compile 'ch.qos.logback:logback-classic:1.0.13'
+
+  compile "javax.mail:mail:1.4.7"
+  compile("javax.servlet:javax.servlet-api:3.1.0")
+
+  //tests
+  testCompile group: 'junit', name: 'junit', version: '4.11'
+  testCompile("org.mockito:mockito-core:1.9.0")
+}
