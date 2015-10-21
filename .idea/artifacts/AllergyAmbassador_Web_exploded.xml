@@ -1,0 +1,56 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="AllergyAmbassador:Web exploded">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/AllergyAmbassador_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="AllergyAmbassador/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="AllergyAmbassador" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: au.com.ish.gradle:release:2.1" />
+          <element id="library" level="project" name="Gradle: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Gradle: org.hidetake:gradle-ssh-plugin:0.1.7" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.2" />
+          <element id="library" level="project" name="Gradle: org.projectlombok:lombok:1.14.8" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.5.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.5.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.5.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-joda:2.5.0" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.0.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.0.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.0.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.0.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-mongodb:1.7.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jul-to-slf4j:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.slf4j:log4j-over-slf4j:1.7.5" />
+          <element id="library" level="project" name="Gradle: org.codehaus.janino:janino:2.6.1" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.0.13" />
+          <element id="library" level="project" name="Gradle: javax.mail:mail:1.4.7" />
+          <element id="library" level="project" name="Gradle: org.tmatesoft.svnkit:svnkit:1.7.5" />
+          <element id="library" level="project" name="Gradle: com.jcraft:jsch:0.1.48" />
+          <element id="library" level="project" name="Gradle: joda-time:joda-time:2.2" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.1.3" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.0.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.0.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.0.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.0.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:1.10.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.mongodb:mongo-java-driver:2.13.0" />
+          <element id="library" level="project" name="Gradle: org.codehaus.janino:commons-compiler:2.6.1" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.0.13" />
+          <element id="library" level="project" name="Gradle: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Gradle: de.regnis.q.sequence:sequence-library:1.0.2" />
+          <element id="library" level="project" name="Gradle: net.java.dev.jna:jna:3.4.0" />
+          <element id="library" level="project" name="Gradle: org.tmatesoft.sqljet:sqljet:1.1.3" />
+          <element id="library" level="project" name="Gradle: com.trilead:trilead-ssh2:1.0.0-build215" />
+          <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Gradle: org.antlr:antlr-runtime:3.4" />
+          <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

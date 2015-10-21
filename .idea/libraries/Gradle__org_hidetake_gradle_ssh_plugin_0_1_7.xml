@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.hidetake:gradle-ssh-plugin:0.1.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hidetake/gradle-ssh-plugin/0.1.7/ef01776bf517d89abe48ed499c88e0809670358f/gradle-ssh-plugin-0.1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hidetake/gradle-ssh-plugin/0.1.7/1202ad2b7f151c1b1b37228f538db243c8f66336/gradle-ssh-plugin-0.1.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
