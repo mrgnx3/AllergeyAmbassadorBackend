@@ -1,8 +1,15 @@
+*.iml
+**/*.iml
+*.ipr
+*.iws
+.DS_Store
 .gradle
-build/
-
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+build
+target
+out
+lib
+.classpath
+.project
+.settings
+catalina.base_IS_UNDEFINED/
+.idea

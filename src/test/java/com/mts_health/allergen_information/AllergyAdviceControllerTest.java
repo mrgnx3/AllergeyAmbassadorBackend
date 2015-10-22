@@ -32,7 +32,7 @@ public class AllergyAdviceControllerTest {
     AllergenAdvice irishAllergenAdvice = createAllergenAdvice();
     CountryHolder.INSTANCE.setCountry("IE");
     when(mockRepository.findOne("IE")).thenReturn(mockAllergenAdvice);
-    assertThat(allergyAdviceController.getInformation().getBody(), is(irishAllergenAdvice));
+    assertThat(allergyAdviceController.getInformation().getBody(), is(irishAllergenAdvice.getCountryName()));
   }
 
   public AllergenAdvice createAllergenAdvice() {

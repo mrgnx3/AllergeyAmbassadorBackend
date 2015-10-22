@@ -1,6 +1,5 @@
 package com.mts_health.allergen_information;
 
-import com.sun.istack.internal.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,7 +11,6 @@ public class AllergenAdvice {
   @Id
   private String countryISO;
 
-  @NotNull
   private String countryName;
 
   private List<String> listedHighRiskFoods;

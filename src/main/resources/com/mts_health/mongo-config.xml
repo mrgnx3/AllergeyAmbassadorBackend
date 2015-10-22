@@ -8,7 +8,7 @@
     http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
 
     <mongo:mongo id="mongo"
-                 port="${mongo.port:3000}"
+                 port="${mongo.port:27017}"
                  host="${mongo.host:localhost}"/>
 
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">

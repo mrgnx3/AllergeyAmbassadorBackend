@@ -20,8 +20,8 @@ public class AllergyAdviceController {
   }
 
   @RequestMapping(value = "/allergen_advice", method = RequestMethod.GET)
-  public ResponseEntity<AllergenAdvice> getInformation() {
+  public ResponseEntity<String> getInformation() {
     AllergenAdvice allergenAdvice = repository.findOne(CountryHolder.INSTANCE.getCountry());
-    return new ResponseEntity<>(allergenAdvice, HttpStatus.OK);
+    return new ResponseEntity<>(allergenAdvice.getCountryName(), HttpStatus.OK);
   }
 }
