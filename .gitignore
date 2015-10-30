@@ -13,3 +13,4 @@ lib
 .settings
 catalina.base_IS_UNDEFINED/
 .idea
+.idea/*

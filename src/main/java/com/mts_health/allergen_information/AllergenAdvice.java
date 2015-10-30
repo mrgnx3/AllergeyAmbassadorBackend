@@ -1,28 +1,30 @@
 package com.mts_health.allergen_information;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
 @Document
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonSerialize
 public class AllergenAdvice {
 
   @Id
+  @JsonProperty("countryISO")
   private String countryISO;
 
+  @JsonProperty("countryName")
   private String countryName;
 
+  @JsonProperty("listedHighRiskFoods")
   private List<String> listedHighRiskFoods;
 
+  @JsonProperty("linkToNationalAllergenHealthWebsite")
   private String linkToNationalAllergenHealthWebsite;
-
-  public AllergenAdvice(String countryISO, String countryName, List<String> listedHighRiskFoods, String linkToNationalAllergenHealthWebsite) {
-    this.countryISO = countryISO;
-    this.countryName = countryName;
-    this.listedHighRiskFoods = listedHighRiskFoods;
-    this.linkToNationalAllergenHealthWebsite = linkToNationalAllergenHealthWebsite;
-  }
 
   public String getCountryISO() {
     return countryISO;
@@ -55,5 +57,4 @@ public class AllergenAdvice {
   public void setLinkToNationalAllergenHealthWebsite(String linkToNationalAllergenHealthWebsite) {
     this.linkToNationalAllergenHealthWebsite = linkToNationalAllergenHealthWebsite;
   }
-
 }
