@@ -17,20 +17,18 @@ public class StatusConfigurationHolder {
   private AbstractEnvironment environment;
   private static final String PACKAGE_JSON_FILE_PATH = "classpath:/package.json";
   protected String packageJsonFile;
-  private PackageJsonProperties applicationProperties;
 
   public StatusConfigurationHolder() throws IOException {
     packageJsonFile = PACKAGE_JSON_FILE_PATH;
   }
 
   public PackageJsonProperties getApplicationProperties() throws IOException {
-    applicationProperties = readPackageJson();
-    return applicationProperties;
+    return readPackageJson();
   }
 
 
   private PackageJsonProperties readPackageJson() throws IOException {
-    return new ObjectMapper().readValue( new FileReader( new File("/Users/niallw/PersonalProjects/AllergyAmbassador/src/main/resources/package.json")),new TypeReference<PackageJsonProperties>() {
+    return new ObjectMapper().readValue( new FileReader( new File(PACKAGE_JSON_FILE_PATH)),new TypeReference<PackageJsonProperties>() {
     });
   }
 }
