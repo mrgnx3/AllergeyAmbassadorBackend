@@ -23,6 +23,9 @@ public class AllergenAdvice {
   @JsonProperty("listedHighRiskFoods")
   private List<String> listedHighRiskFoods;
 
+  @JsonProperty("specialInfo")
+  private List<String> specialInfo;
+
   @JsonProperty("linkToNationalAllergenHealthWebsite")
   private String linkToNationalAllergenHealthWebsite;
 

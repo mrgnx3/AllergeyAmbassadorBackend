@@ -63,6 +63,9 @@ dependencies {
   compile "javax.mail:mail:1.4.7"
   compile("javax.servlet:javax.servlet-api:3.1.0")
 
+  //  web frameworks
+  compile('jstl:jstl:1.2')
+
   //tests
   testCompile group: 'junit', name: 'junit', version: '4.11'
   testCompile("org.mockito:mockito-core:1.9.0")
