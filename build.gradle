@@ -70,3 +70,12 @@ dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.11'
   testCompile("org.mockito:mockito-core:1.9.0")
 }
+
+apply plugin: "war"
+
+// Code take from Gradle official docs page @ https://docs.gradle.org/current/userguide/war_plugin.html
+war {
+  from 'src/main' // adds a file-set to the root of the archive
+  webInf { from 'src/main/webapp' } // adds a file-set to the WEB-INF dir.
+  webXml = file('src/main/webapp/WEB-INF/web.xml') // copies a file to WEB-INF/web.xml
+}
