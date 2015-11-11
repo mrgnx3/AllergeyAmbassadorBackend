@@ -1,7 +1,6 @@
 package com.mts_health.allergen_information;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mts_health.context_information.CountryHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +31,7 @@ public class AllergyAdviceController {
   @RequestMapping(method = RequestMethod.GET)
   public ResponseEntity<AllergenAdvice> getInformation() {
     AllergenAdvice allergenAdvice = repository.findOne(CountryHolder.INSTANCE.getCountry());
+    LOGGER.info("AllergenAdvice returned for: " + CountryHolder.INSTANCE.getCountry());
     return new ResponseEntity<>(allergenAdvice, HttpStatus.OK);
   }
 

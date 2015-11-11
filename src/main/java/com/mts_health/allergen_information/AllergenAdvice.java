@@ -7,6 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
+import java.util.Set;
 
 @Document
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -21,7 +22,7 @@ public class AllergenAdvice {
   private String countryName;
 
   @JsonProperty("listedHighRiskFoods")
-  private List<String> listedHighRiskFoods;
+  private Set<String> listedHighRiskFoods;
 
   @JsonProperty("specialInfo")
   private List<String> specialInfo;
@@ -45,11 +46,11 @@ public class AllergenAdvice {
     this.countryName = countryName;
   }
 
-  public List<String> getListedHighRiskFoods() {
+  public Set<String> getListedHighRiskFoods() {
     return listedHighRiskFoods;
   }
 
-  public void setListedHighRiskFoods(List<String> listedHighRiskFoods) {
+  public void setListedHighRiskFoods(Set<String> listedHighRiskFoods) {
     this.listedHighRiskFoods = listedHighRiskFoods;
   }
 
