@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurper
 
-group 'com.mts_health'
+group 'com.mts.health'
 version '1.0-SNAPSHOT'
 
 project.ext {
@@ -12,11 +12,10 @@ project.ext {
 
 
 apply plugin: 'java'
-apply plugin: 'groovy'
 
 sourceCompatibility = 1.7
 
-repositories {
+  repositories {
   mavenCentral()
 }
 
@@ -24,9 +23,7 @@ configurations {
   provided
 }
 
-
 dependencies {
-
   //gradle commons
   compile "au.com.ish.gradle:release:2.1"
   compile "commons-io:commons-io:2.4"
@@ -72,10 +69,3 @@ dependencies {
 }
 
 apply plugin: "war"
-
-// Code take from Gradle official docs page @ https://docs.gradle.org/current/userguide/war_plugin.html
-war {
-  from 'src/main' // adds a file-set to the root of the archive
-  webInf { from 'src/main/webapp' } // adds a file-set to the WEB-INF dir.
-  webXml = file('src/main/webapp/WEB-INF/web.xml') // copies a file to WEB-INF/web.xml
-}

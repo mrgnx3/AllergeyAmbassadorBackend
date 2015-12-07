@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/status")
@@ -21,7 +22,7 @@ public class StatusController {
 
   @RequestMapping(method = RequestMethod.GET)
   @ResponseBody
-  public PackageJsonProperties status() throws IOException {
+  public Map status() throws IOException {
     return statusConfigurationHolder.getApplicationProperties();
   }
 }

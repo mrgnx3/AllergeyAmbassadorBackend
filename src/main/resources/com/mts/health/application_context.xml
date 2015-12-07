@@ -4,22 +4,22 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <beans
-            profile="dev">
+  <beans
+  profile="dev">
 
-        <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
-            <property name="messageConverters">
-                <list>
-                    <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
-                    <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
-                </list>
-            </property>
-            <property name="interceptors">
-                <list>
-                    <bean class="com.mts.health.context_information.CountryHeaderRequestInterceptor"/>
-                </list>
-            </property>
-        </bean>
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+      <property name="messageConverters">
+        <list>
+          <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+          <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+        </list>
+      </property>
+      <property name="interceptors">
+        <list>
+          <bean class="com.mts.health.context_information.CountryHeaderRequestInterceptor"/>
+        </list>
+      </property>
+    </bean>
 
-    </beans>
+  </beans>
 </beans>

@@ -5,17 +5,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
     http://www.springframework.org/schema/data/mongo
-    http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
+    http://www.springframework.org/schema/data/mongo/spring-mongo-1.1.xsd">
 
     <mongo:mongo id="mongo"
-                 port="${mongo.port:27017}"
-                 host="${mongo.host:localhost}"/>
+                 port="27017"
+                 host="localhost"/>
 
-    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-        <constructor-arg ref="mongo" />
-        <constructor-arg value="${mongo.database:allergy_ambassador}" />
-    </bean>
+  <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+    <constructor-arg ref="mongo"/>
+    <constructor-arg value="allergy_ambassador"/>
+  </bean>
 
-    <mongo:repositories base-package="com.mts.health.*" />
+  <mongo:repositories base-package="com.mts.health.*"/>
 
 </beans>

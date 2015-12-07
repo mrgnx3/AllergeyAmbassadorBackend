@@ -16,9 +16,9 @@
     <!--&lt;!&ndash; the mvc resources tag does the magic &ndash;&gt;-->
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 
-    <context:component-scan base-package="com.mts_health">
-        <context:include-filter type="regex" expression="com.mts_health.*Controller.*"/>
-        <context:include-filter type="regex" expression="com.mts_health.*ControllerAdvice.*"/>
+    <context:component-scan base-package="com.mts.health">
+        <context:include-filter type="regex" expression="com.mts.health.*Controller.*"/>
+        <context:include-filter type="regex" expression="com.mts.health.*ControllerAdvice.*"/>
     </context:component-scan>
 
     <bean id="internalViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

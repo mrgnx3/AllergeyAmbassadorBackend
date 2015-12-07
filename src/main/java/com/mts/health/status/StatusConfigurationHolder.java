@@ -5,30 +5,53 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.AbstractEnvironment;
+import org.springframework.core.env.PropertySource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePropertySource;
 
-import java.io.File;
-import java.io.FileReader;
+import javax.annotation.PostConstruct;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.Map;
 
 @Configuration
 public class StatusConfigurationHolder {
 
   @Autowired
-  private AbstractEnvironment environment;
-  private static final String PACKAGE_JSON_FILE_PATH = "classpath:/package.json";
+  private static final String PACKAGE_JSON_FILE_PATH = "classpath:package.json";
   protected String packageJsonFile;
+  private Map<String, Object> applicationProps;
+
+  @Autowired
+  private AbstractEnvironment env;
 
   public StatusConfigurationHolder() throws IOException {
     packageJsonFile = PACKAGE_JSON_FILE_PATH;
   }
 
-  public PackageJsonProperties getApplicationProperties() throws IOException {
-    return readPackageJson();
+  @PostConstruct
+  public void loadApplicationProperties() throws IOException {
+    applicationProps = readPackageJson();
+
+    Iterator<PropertySource<?>> iterator = env.getPropertySources().iterator();
+
+    while (iterator.hasNext()) {
+      Object propertySource = iterator.next();
+      if (propertySource instanceof ResourcePropertySource) {
+        applicationProps.putAll(((ResourcePropertySource) propertySource).getSource());
+      }
+    }
+  }
+
+  public Map<String, Object> getApplicationProperties() {
+    return applicationProps;
   }
 
 
-  private PackageJsonProperties readPackageJson() throws IOException {
-    return new ObjectMapper().readValue( new FileReader( new File(PACKAGE_JSON_FILE_PATH)),new TypeReference<PackageJsonProperties>() {
+  private Map<String, Object> readPackageJson() throws IOException {
+    InputStream inputFile = new PathMatchingResourcePatternResolver().getResource(PACKAGE_JSON_FILE_PATH).getInputStream();
+    return new ObjectMapper().readValue(inputFile, new TypeReference<Map<String, String>>() {
     });
   }
 }
