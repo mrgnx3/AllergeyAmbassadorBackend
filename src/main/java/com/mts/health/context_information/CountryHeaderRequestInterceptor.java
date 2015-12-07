@@ -1,4 +1,4 @@
-package com.mts_health.context_information;
+package com.mts.health.context_information;
 
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;

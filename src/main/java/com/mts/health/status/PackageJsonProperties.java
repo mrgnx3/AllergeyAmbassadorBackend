@@ -1,4 +1,4 @@
-package com.mts_health.status;
+package com.mts.health.status;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

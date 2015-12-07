@@ -1,4 +1,4 @@
-package com.mts_health.allergen_information;
+package com.mts.health.allergen_information;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

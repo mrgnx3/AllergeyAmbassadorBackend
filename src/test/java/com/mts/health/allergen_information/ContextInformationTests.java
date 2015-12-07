@@ -1,6 +1,6 @@
-package com.mts_health.allergen_information;
+package com.mts.health.allergen_information;
 
-import com.mts_health.context_information.CountryHolder;
+import com.mts.health.context_information.CountryHolder;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

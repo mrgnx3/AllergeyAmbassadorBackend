@@ -16,6 +16,6 @@
         <constructor-arg value="${mongo.database:allergy_ambassador}" />
     </bean>
 
-    <mongo:repositories base-package="com.mts_health.*" />
+    <mongo:repositories base-package="com.mts.health.*" />
 
 </beans>

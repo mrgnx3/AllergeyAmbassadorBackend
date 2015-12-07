@@ -1,7 +1,7 @@
-package com.mts_health.allergen_information;
+package com.mts.health.allergen_information;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.mts_health.context_information.CountryHolder;
+import com.mts.health.context_information.CountryHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

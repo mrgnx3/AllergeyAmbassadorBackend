@@ -1,4 +1,4 @@
-package com.mts_health.status;
+package com.mts.health.status;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -21,7 +21,7 @@
     <!-- used for local development -->
     <beans profile="dev">
         <context:property-placeholder
-                location="classpath:/com/mts_health/profiles/server-dev.properties"/>
+                location="classpath:/com/mts/health/profiles/server-dev.properties"/>
     </beans>
 
 </beans>

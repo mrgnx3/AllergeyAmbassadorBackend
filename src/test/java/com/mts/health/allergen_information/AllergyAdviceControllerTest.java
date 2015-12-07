@@ -1,11 +1,11 @@
-package com.mts_health.allergen_information;
+package com.mts.health.allergen_information;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.classic.spi.LoggingEvent;
 import ch.qos.logback.core.Appender;
-import com.mts_health.context_information.CountryHolder;
+import com.mts.health.context_information.CountryHolder;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

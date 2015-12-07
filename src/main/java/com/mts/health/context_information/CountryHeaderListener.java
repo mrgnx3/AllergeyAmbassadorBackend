@@ -1,4 +1,4 @@
-package com.mts_health.context_information;
+package com.mts.health.context_information;
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -16,7 +16,7 @@
             </property>
             <property name="interceptors">
                 <list>
-                    <bean class="com.mts_health.context_information.CountryHeaderRequestInterceptor"/>
+                    <bean class="com.mts.health.context_information.CountryHeaderRequestInterceptor"/>
                 </list>
             </property>
         </bean>

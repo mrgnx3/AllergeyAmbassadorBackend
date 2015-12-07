@@ -1,4 +1,4 @@
-package com.mts_health.utils;
+package com.mts.health.utils;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;

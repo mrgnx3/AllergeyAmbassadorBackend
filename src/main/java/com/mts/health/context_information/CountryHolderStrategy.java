@@ -1,6 +1,6 @@
-package com.mts_health.context_information;
+package com.mts.health.context_information;
 
-import com.mts_health.utils.ThreadInformationHolderStrategy;
+import com.mts.health.utils.ThreadInformationHolderStrategy;
 import org.springframework.core.NamedThreadLocal;
 
 public class CountryHolderStrategy implements ThreadInformationHolderStrategy {

@@ -1,4 +1,4 @@
-package com.mts_health.utils;
+package com.mts.health.utils;
 
 public interface ThreadInformationHolderStrategy {
   String get();
