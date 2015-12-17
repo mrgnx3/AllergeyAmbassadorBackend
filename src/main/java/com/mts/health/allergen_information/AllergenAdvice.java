@@ -6,9 +6,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.List;
-import java.util.Set;
-
 @Document
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonSerialize
@@ -22,10 +19,10 @@ public class AllergenAdvice {
   private String countryName;
 
   @JsonProperty("listedHighRiskFoods")
-  private Set<String> listedHighRiskFoods;
+  private String listedHighRiskFoods;
 
   @JsonProperty("specialInfo")
-  private List<String> specialInfo;
+  private String specialInfo;
 
   @JsonProperty("linkToNationalAllergenHealthWebsite")
   private String linkToNationalAllergenHealthWebsite;
@@ -46,11 +43,11 @@ public class AllergenAdvice {
     this.countryName = countryName;
   }
 
-  public Set<String> getListedHighRiskFoods() {
+  public String getListedHighRiskFoods() {
     return listedHighRiskFoods;
   }
 
-  public void setListedHighRiskFoods(Set<String> listedHighRiskFoods) {
+  public void setListedHighRiskFoods(String listedHighRiskFoods) {
     this.listedHighRiskFoods = listedHighRiskFoods;
   }
 
@@ -60,5 +57,13 @@ public class AllergenAdvice {
 
   public void setLinkToNationalAllergenHealthWebsite(String linkToNationalAllergenHealthWebsite) {
     this.linkToNationalAllergenHealthWebsite = linkToNationalAllergenHealthWebsite;
+  }
+
+  public String getSpecialInfo() {
+    return specialInfo;
+  }
+
+  public void setSpecialInfo(String specialInfo) {
+    this.specialInfo = specialInfo;
   }
 }
