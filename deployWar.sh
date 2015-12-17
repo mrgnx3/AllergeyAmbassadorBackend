@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+./gradlew clean build
 sudo rm /usr/local/Cellar/tomcat7/7.0.63/libexec/webapps/aa.war
 sudo rm -rf /usr/local/Cellar/tomcat7/7.0.63/libexec/webapps/aa
 sudo /usr/local/Cellar/tomcat7/7.0.63/bin/catalina stop
